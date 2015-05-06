@@ -1,0 +1,86 @@
+<div id="container">
+  <div class="row">
+      
+    <div class="col-xs-9">
+      <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-3">
+          <h1 id="mainTitle" class="pull-right">Revieware</h1>
+        </div>
+        <div class="col-xs-7">
+          <h3 class="strapline pull-left"> Bellwether Technologies </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <label class="sortBarLabel">Category:</label>
+          <select class="sortBar" ng-options="vm.sort.categories[k] for (k, v) in vm.sort.categories" ng-model="vm.category"></select>
+        </div>
+        <div class="col-xs-4">
+          <label class="sortBarLabel">Sort By:</label>
+          <select class="sortBar" ng-options="vm.sort.by[k] for (k, v) in vm.sort.by" ng-model="vm.by"></select>
+        </div>
+        <div class="col-xs-4">
+          <label class="sortBarLabel">Search:</label>
+          <input class="sortBar" ng-model="vm.query">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-3 logIn shadeMe">
+      <div class="row">
+        <div class="col-xs-6">
+          <h4> Username: </h4>
+        </div>
+        <div class="col-xs-6">
+          <input class="logIn" for="username">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <h4> Password: </h4>
+        </div>
+        <div class="col-xs-6">
+          <input class="logIn" for="password">
+        </div>
+      </div>
+      <div class="row text-center createAccount">
+        <button class="btn btn-primary" style="width: 80%;">Log In</button><p style="font-size: large;"> or, <a>create an account.</a></p>
+      </div>
+    </div>
+  </div>
+
+  <hr><hr><!-- <img src="images/Bell.png">&nbsp<img src="images/Bell.png">&nbsp<img src="images/Bell.png">&nbsp<img src="images/Bell.png"> -->
+
+  <div class="row">
+    <ul id="productsList">
+      <li class="productLi shadow" ng-repeat="product in vm.vendor.products | filter: vm.query | orderBy: product.rating">
+        <div class="row">
+          <a ng-href="/overview">
+            <div class="col-xs-3 nameAndRating"  style="font-size: medium;">
+              <h4 class="productName"> {{ product.name }} </h4>
+              <h4> <div class="pull-left"> Rating: </div><span class="glyphicon glyphicon-star stars-span pull-left" style="color: #FFCC00;" ng-repeat="i in vm.makeArray(product.rating) track by $index"></span></h4>
+            </div>
+            <div class="col-xs-6" style="font-size: medium;">
+              <p class="reviewText" style="color: black;">{{ product.profile.reviewText }}</p>
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2 categoryDiv">
+              <h4><b>Category:</b></h4>
+              <h4> {{ product.category }}</h4>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-2">
+              
+            </div>
+            <div class="col-xs-8 text-center">
+            </div>
+            <div class="col-xs-2">
+            </div>
+          </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

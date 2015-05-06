@@ -1,0 +1,91 @@
+<div id="navigate-top">
+<ul scrolling2 id="navlist">
+  <li style="float:left;margin-top:13px;"><span id="title-top" class="hideMe">Revieware</span></li>
+  <li>
+    <a>Sign In</a>
+  </li>
+   <li>
+    <a>A Section</a>
+  </li>
+
+  <li>
+    <a>To</a>
+  </li>
+
+   <li>
+    <a>Go</a>
+  </li>
+
+</ul>
+</div>
+
+<div id="navigate" scrolling ng-class="{small: boolClass}"><h1 ng-class="{small: boolClass}">Revieware</h1></div>
+
+ <div class="cd-scrolling-bgs cd-scrolling-top" style="margin-bottom:45px;">
+
+   
+        <div class="daBlock daBlock-1">
+          <img src="/images/angular.jpg" class="logo">
+        </div>
+
+        <div class="daBlock daBlock-2" style="padding:13px;">
+          <h3>{{vm.name}}</h3><small class="rating-stars" rating-stars rating="vm.avgRating"></small>
+          <p>{{vm.profile}}</p>
+          <p></p>
+          <p></p>
+        </div>
+       
+       
+  
+  </div> 
+
+
+ 
+
+
+  <div class="cd-scrolling-bgs cd-color-2">
+    <div class="cd-container title-after">
+  <section class="footers-calls-to-action" style="margin-top:0px;">
+
+      
+      <footer class="site-footers-container">
+        <ul class="unorderedList">
+          <li class="reviewSample" ng-repeat="review in vm.reviews.detailed track by $index"><footer class="site-footers site-footers-a"><p>{{ review.author }}<br/>{{ review.date }}</p><small class="rating-stars" rating-stars rating="review.rating"></small><p>{{ review.text }}</p></footer></li>
+        </ul>
+      </footer>
+
+
+      <footer class="site-footers-container">
+         <ul class="unorderedList">
+          <li class="reviewSample" ng-repeat="review in vm.reviews.external track by $index"><footer class="site-footers site-footers-b"><p>{{ review.author }}<br/>{{ review.date }}</p><small class="rating-stars" rating-stars rating="review.rating"></small><p>{{ review.text }}</p> </footer></li>
+        </ul>
+      </footer>
+
+
+      <footer class="site-footers-container">
+         <ul class="unorderedList">
+          <li class="reviewSample" ng-repeat="review in vm.reviews.internal track by $index"><footer class="site-footers site-footers-c"><p>{{ review.author }}<br/>{{ review.date }}</p><small class="rating-stars" rating-stars rating="review.rating"></small><p>{{ review.text }}</p> </footer></li>
+        </ul>
+      </footer>
+
+
+      <footer class="site-footers-container">
+          <ul class="unorderedList">
+          <li class="reviewSample" ng-repeat="review in vm.reviews.user track by $index"><footer class="site-footers site-footers-d"><p>{{ review.author }}<br/>{{ review.date }}</p><small class="rating-stars" rating-stars rating="review.rating"></small><p>{{ review.text }}</p></footer></li>
+        </ul>
+      </footer>
+
+
+  </section>
+  <div class="row">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-4">
+      <a class="btn btn-primary addReviewBtn" ng-href="/createReview">Add a Review</a>
+    </div>
+    <div class="col-xs-4">
+    </div>
+
+     
+    </div> 
+  </div> 

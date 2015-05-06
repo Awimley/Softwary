@@ -1,0 +1,48 @@
+
+
+.cd-fixed-bg {
+  height: 800px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+ 
+
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("/images/frog.jpg");
+}
+
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("/images/frac.png");
+
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("/images/bh.jpg");
+
+}
+.cd-fixed-bg.cd-bg-7 {
+  background-image: url("/images/bh2.jpg");
+
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("/images/cc.jpg");
+
+
+
+}
+.cd-fixed-bg.cd-bg-5 {
+  background-image: url("/images/cc3.jpg");
+
+}
+.cd-fixed-bg.cd-bg-6 {
+  background-image: url("/images/cc4.jpg");
+
+}
+ 
+.cd-scrolling-bg {
+  min-height: 100%;
+  position:relative;
+  box-shadow: 0 0 20px black;
+}
+
